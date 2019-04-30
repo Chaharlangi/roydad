@@ -4,91 +4,68 @@ body {
 }
 
 nav {
-  background: #0a0a41;
   height: 120px;
+  background: gray;
 }
 
-nav .navbar-brand {
-  background: #dbdbdb;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-}
-
-nav a {
-  color: white;
-}
-
-nav a:hover {
-  text-decoration: none;
-  color: #ffff;
-}
-/*# sourceMappingURL=style.css.map */
 header {
   width: 100%;
   height: 700px;
+  padding: 150px;
+}
+
+header .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: right;
+  width: 400px;
 }
 
 .about {
   width: 100%;
-  height: 650px;
- 
-}
-.poster {
-  width: 400px;
-  height: 550px;
-  background: #0a0a41;
-}
-
-.speaker {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
   height: 700px;
-  }
-  .cards {
-    width: 100%;
-    padding: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .card {
-    width: 250px;
-    height: 250px;
-    background: #0a0a41;
-    margin: 10px;
-  }
-  .gallery {
-    width: 100%;
-    height: 700px;
-  }
-  .profil {
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-  }
-  .prof {
-    margin: 10px;
-    width: 100px;
-    height: 100px;
-    background: #0a0a41;
-    border-radius: 50%;
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 
-  .register {
-    display: flex;
-    justify-content: center;
-    padding: 100px;
-  }
-  .reg {
-    width: 500px;
-    height: 300px;
-    background: #ffff;
-  }
-  footer {
-    width: 100%;
-    height: 120px;
-    background: #0a0a41;
-  }
+.about .poster {
+  width: 40%;
+  height: 600px;
+  background: gray;
+  border-radius: 5px;
+}
+
+.about .contentt {
+  width: 60%;
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .contentt p {
+  width: 300px;
+}
+/*# sourceMappingURL=style.css.map */
