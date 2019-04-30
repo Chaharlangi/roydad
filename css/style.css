@@ -1,0 +1,94 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background: #dbdbdb;
+}
+
+nav {
+  background: #0a0a41;
+  height: 120px;
+}
+
+nav .navbar-brand {
+  background: #dbdbdb;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+nav a {
+  color: white;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #ffff;
+}
+/*# sourceMappingURL=style.css.map */
+header {
+  width: 100%;
+  height: 700px;
+}
+
+.about {
+  width: 100%;
+  height: 650px;
+ 
+}
+.poster {
+  width: 400px;
+  height: 550px;
+  background: #0a0a41;
+}
+
+.speaker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 700px;
+  }
+  .cards {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    width: 250px;
+    height: 250px;
+    background: #0a0a41;
+    margin: 10px;
+  }
+  .gallery {
+    width: 100%;
+    height: 700px;
+  }
+  .profil {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+  }
+  .prof {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    background: #0a0a41;
+    border-radius: 50%;
+  }
+
+  .register {
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+  }
+  .reg {
+    width: 500px;
+    height: 300px;
+    background: #ffff;
+  }
+  footer {
+    width: 100%;
+    height: 120px;
+    background: #0a0a41;
+  }

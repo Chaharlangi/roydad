@@ -1,0 +1,41 @@
+@import 'mixins';
+
+$brand: #ff3364;
+$radius: 5px;
+$trans: all 350ms;
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: rgb(219, 219, 219);
+}
+
+nav {
+    background: rgb(10, 10, 65);
+    height: 120px;
+    .navbar-brand {
+        width: 70px;
+        height: 70px;
+        background: #fff;
+        border-radius: 50%;
+      
+    }
+
+    a {
+        color: white;
+        &:hover {
+            text-decoration: none;
+            color: #ffff;
+        }
+    }
+}
+
+.about {
+    width: 100%;
+    height: 700px;
+    background: #fff;
+    .poster {
+        width: 500px;
+        height: 650px;
+        background: rgb(15, 15, 90);
+    }
+}
