@@ -4,13 +4,13 @@ body {
 }
 
 nav {
-  height: 120px;
+  height: 70px;
   background: gray;
 }
 
 header {
   width: 100%;
-  height: 700px;
+  min-height: 80vh;
   padding: 150px;
 }
 
@@ -32,24 +32,37 @@ header .content {
   width: 400px;
 }
 
-.about {
+header .content h1 {
+  padding-bottom: 10px;
+}
+
+.poster {
+  height: 500px;
+  margin-top: -100px;
+}
+
+.date {
   width: 100%;
-  height: 700px;
+  height: 100px;
+  background: red;
+  margin-top: -100px;
+}
+
+.speker h1 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.speker .cards {
+  padding: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.about .poster {
-  width: 40%;
-  height: 600px;
-  background: gray;
-  border-radius: 5px;
-}
-
-.about .contentt {
-  width: 60%;
-  text-align: right;
+.speker .cards .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,9 +76,27 @@ header .content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  background: gray;
+  margin: 10px;
 }
 
-.about .contentt p {
-  width: 300px;
+.speker .cards .card img {
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.speker .cards .card h3 {
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+.gallery {
+  width: 100%;
+  background: #fff;
 }
 /*# sourceMappingURL=style.css.map */
