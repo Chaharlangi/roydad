@@ -1,6 +1,5 @@
 @import 'mixins';
 
-$brand: #ff3364;
 $radius: 5px;
 $trans: all 350ms;
 
@@ -18,6 +17,7 @@ header {
     width: 100%;
     min-height: 80vh;
     padding: 150px;
+
     .content {
         display: flex;
         flex-direction: column;
@@ -29,63 +29,105 @@ header {
         h1 {
             padding-bottom: 10px;
         }
+
     }
 }
 
 
-.poster {
-    height: 500px;
-    margin-top: -100px;
-}
-
-.date {
-    width: 100%;
-    height: 100px;
-    background: red;
-    margin-top: -100px;
-
-}
-
-.speker {
-
-    h1 {
-        text-align: center;
-        padding-top: 50px;
+.about {
+    .poster {
+        height: 500px;
+        margin-top: -100px;
     }
 
-    .cards {
-        padding: 100px;
-        display: flex;
-        flex-wrap: wrap;
+    .date {
+        width: 100%;
+        height: 100px;
+        background: gray;
+        margin-top: -100px;
 
-        .card {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            width: 200px;
-            height: 200px;
-            background: gray;
-            margin: 10px;
+    }
 
-            img {
-                width: 120px;
-                height: 120px;
-                background: #fff;
-                border-radius: 50%
-            }
+    .content {
+        text-align: right;
 
-            h3 {
-                padding-top: 10px;
-                font-size: 12px;
-            }
+        p {
+            width: 300px;
+            padding-top: 20px;
         }
     }
 }
 
+.speaker {
+    @include sectionPadding;
+
+    h1 {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+
+
+    .card {
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        background: gray;
+
+    }
+
+}
+
 .gallery {
+    @include sectionPadding;
     width: 100%;
     background: #fff;
 }
 
+.sponsors {
+    @include sectionPadding;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .profils {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .profil {
+
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 50%;
+        }
+    }
+}
+
+.jumbotron {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+
+    h1 {
+        padding: 0 20px;
+    }
+}
+
+.timingTable {
+    @include sectionPadding;
+    width: 100%;
+    height: 500px;
+    background: #fff;
+}
+
+footer {
+    height: 100px;
+    background: gray;
+}
