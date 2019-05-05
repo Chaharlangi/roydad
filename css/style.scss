@@ -44,14 +44,23 @@ header {
 
 
 .about {
+
+
     .poster {
         height: 500px;
         margin-top: -100px;
         border-radius: 10px;
+        overflow: hidden;
 
-        @include down-568 {
+        img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
+        @include down-768 {
+            width: 100%;
+            margin-top: 0;
         }
 
     }
@@ -62,7 +71,19 @@ header {
         background: gray;
         margin-top: -100px;
 
+        &.dateDesktop {
+            @include down-768 {
+                display: none;
+            }
+        }
+
+        &.dateMobile {
+            margin-top: -100px;
+            border-radius: 15px;
+        }
+
     }
+
 
     .contentt {
         text-align: right;
@@ -72,7 +93,7 @@ header {
         }
 
         p {
-            width: 300px;
+
             padding-top: 20px;
 
             @include down-568 {
@@ -99,27 +120,28 @@ header {
 
     .cards {
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
 
         .card {
             margin: 10px;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 100%;
-            height: 300px;
+            width: 200px;
+            height: 200px;
             background: gray;
             border-radius: 10px;
-            @include down-568 {
-                margin: 10px 0;
-            }
+
 
 
 
             img {
-                width: 150px;
-                height: 150px;
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                overflow: hidden;
                 background: #fff;
                 border-radius: 10px;
 
@@ -132,13 +154,12 @@ header {
                 padding-top: 10px;
             }
 
-            @include down-568 {
-                width: 100%;
-            }
+
 
         }
-    }
 
+
+    }
 }
 
 .gallery {
@@ -160,14 +181,18 @@ header {
     justify-content: center;
     align-items: center;
 
+
     .profils {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         align-items: center;
         flex-wrap: wrap;
+        padding-bottom: 50px;
+        ;
 
         .profil {
-
+            margin: 10px;
             width: 100px;
             height: 100px;
             background: #fff;
@@ -176,16 +201,11 @@ header {
             img {
                 width: 100%;
             }
-            @include down-568 {
-                padding: 20px;
-                margin: 20px;
-              }
+
         }
     }
 
-    @include down-568 {
-      padding: 0;
-    }
+
 }
 
 .timingTable {
@@ -212,9 +232,10 @@ header {
         height: 200px;
         background: #fff;
         border-radius: 10px;
+
         @include down-568 {
-           width: 100%;
-          }
+            width: 100%;
+        }
 
     }
 
