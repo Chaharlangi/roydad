@@ -22,7 +22,9 @@
 
 body {
   font-family: shabnam;
-  background: gray;
+  background: #617181;
+  background: -webkit-gradient(linear, left top, right top, from(#949eaa), to(#8e949b));
+  background: linear-gradient(to right, #949eaa, #8e949b);
 }
 
 nav {
@@ -39,8 +41,13 @@ nav {
 }
 
 nav .navbar-brand {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+}
+
+nav .navbar-brand img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 nav .collapse ul {
@@ -51,6 +58,10 @@ nav .collapse ul a {
   padding: 25px 25px;
   color: #fff;
   font-size: 20px;
+}
+
+nav .collapse ul a:hover {
+  color: #333232;
 }
 
 header {
@@ -64,7 +75,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #000;
 }
 
 header img {
@@ -72,7 +82,9 @@ header img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: .5;
+  opacity: .4;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 header .content {
@@ -109,6 +121,14 @@ header .content a {
   color: #fff;
   -webkit-transition: 250ms;
   transition: 250ms;
+  background: #232526;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#414345), to(#232526));
+  background: linear-gradient(to right, #414345, #232526);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 5px;
+  padding: 15px 40px;
 }
 
 header .content :hover {
@@ -146,7 +166,9 @@ header .content :hover {
 }
 
 .about .contentt {
+  padding-top: 50px;
   text-align: right;
+  color: #fff;
 }
 
 .about .contentt h2 {
@@ -185,6 +207,7 @@ header .content :hover {
 
 .speaker h1 {
   font-weight: bold;
+  color: #fff;
 }
 
 .speaker .cards {
@@ -202,6 +225,8 @@ header .content :hover {
 }
 
 .speaker .cards .card {
+  -webkit-box-shadow: 2px 0 5px #363535;
+          box-shadow: 2px 0 5px #363535;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,6 +289,7 @@ header .content :hover {
 
 .gallery h1 {
   font-weight: bold;
+  color: #fff;
 }
 
 .gallery .glery {
@@ -333,6 +359,7 @@ header .content :hover {
 
 .sponsors h1 {
   font-weight: bold;
+  color: #fff;
 }
 
 .sponsors .profils {
@@ -354,13 +381,11 @@ header .content :hover {
 .sponsors .profils .profil {
   margin: 20px;
   width: 100px;
-  height: 100px;
   overflow: hidden;
 }
 
 .sponsors .profils .profil img {
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -368,8 +393,40 @@ header .content :hover {
 .timingTable {
   padding: 130px 0;
   width: 100%;
-  height: 500px;
-  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.timingTable h1 {
+  font-weight: bold;
+  color: #fff;
+}
+
+.timingTable .list {
+  text-align: center;
+}
+
+.timingTable .list ul li {
+  margin: 5px;
+  font-size: 20px;
+  border-radius: 10px;
+  background: #e2e0e0;
+  color: #5a5a5a;
+}
+
+.timingTable .list ul li span {
+  padding-right: 20px;
 }
 
 .joinEvent {
@@ -381,7 +438,6 @@ header .content :hover {
   width: 100%;
   height: 400px;
   position: absolute;
-  background: #000;
 }
 
 .joinEvent .cover img {
@@ -421,10 +477,23 @@ header .content :hover {
   padding: 20px;
 }
 
-.joinEvent .join a {
-  padding: 15px 30px;
+.joinEvent .join p {
+  padding-bottom: 20px;
   font-size: 20px;
+}
+
+.joinEvent .join a {
   color: #fff;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  background: #232526;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#414345), to(#232526));
+  background: linear-gradient(to right, #414345, #232526);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 5px;
+  padding: 15px 40px;
 }
 
 .joinEvent .join :hover {
@@ -444,6 +513,51 @@ header .content :hover {
 }
 
 footer {
-  height: 120px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .logo {
+  width: 70px;
+}
+
+footer .logo img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer .links {
+  font-size: 20px;
+}
+
+footer .links a {
+  color: #fff;
+  margin: 10px;
+}
+
+footer .links a:hover {
+  text-decoration: none;
+}
+
+footer .link {
+  font-size: 30px;
+}
+
+footer .link a {
+  color: #fff;
+  margin: 10px;
+}
+
+footer a:hover {
+  color: #333232;
 }
 /*# sourceMappingURL=style.css.map */
