@@ -328,29 +328,17 @@ header .onCover .eventIntroduction .buyTicketInfo .countdown > div small {
 }
 
 .cards {
+  width: 100%;
   padding: 130px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .cards .card {
-  width: 300px;
-  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -358,19 +346,32 @@ header .onCover .eventIntroduction .buyTicketInfo .countdown > div small {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10px;
+  border: none;
+  padding-top: 20px;
   border-radius: 10px;
 }
 
 .cards .card .imag {
-  width: 200px;
+  width: 100%;
   height: 200px;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .cards .card .imag img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.cards .card .Specifications {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.cards .card .Specifications h2 {
+  font-size: 25px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */
