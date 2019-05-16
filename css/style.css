@@ -22,9 +22,9 @@
 
 body {
   font-family: shabnam;
-  background: #617181;
-  background: -webkit-gradient(linear, left top, right top, from(#949eaa), to(#8e949b));
-  background: linear-gradient(to right, #949eaa, #8e949b);
+  background: #000428;
+  background: -webkit-gradient(linear, left top, right top, from(#3c5264), to(#192375));
+  background: linear-gradient(to right, #3c5264, #192375);
 }
 
 nav {
@@ -41,7 +41,10 @@ nav {
 }
 
 nav .navbar-brand {
-  width: 80px;
+  width: 100px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background: #fff;
 }
 
 nav .navbar-brand img {
@@ -50,18 +53,21 @@ nav .navbar-brand img {
      object-fit: cover;
 }
 
-nav .collapse ul {
-  margin: 0 20px;
-}
-
 nav .collapse ul a {
-  padding: 25px 25px;
+  margin: 10px;
+  padding: 10px 15px;
   color: #fff;
   font-size: 20px;
+  border-radius: 5px;
 }
 
 nav .collapse ul a:hover {
-  color: #333232;
+  background: #bdc3c7;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, right top, left top, from(#2c3e50), to(#bdc3c7));
+  background: linear-gradient(to left, #2c3e50, #bdc3c7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 header {
@@ -75,6 +81,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: #1d1c1c;
 }
 
 header img {
@@ -121,14 +128,16 @@ header .content a {
   color: #fff;
   -webkit-transition: 250ms;
   transition: 250ms;
-  background: #232526;
+  background: #bdc3c7;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#414345), to(#232526));
-  background: linear-gradient(to right, #414345, #232526);
+  background: -webkit-gradient(linear, right top, left top, from(#2c3e50), to(#bdc3c7));
+  background: linear-gradient(to left, #2c3e50, #bdc3c7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 5px;
-  padding: 15px 40px;
+  padding: 20px 55px;
+  font-weight: bold;
 }
 
 header .content :hover {
@@ -486,14 +495,16 @@ header .content :hover {
   color: #fff;
   -webkit-transition: 250ms;
   transition: 250ms;
-  background: #232526;
+  background: #bdc3c7;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#414345), to(#232526));
-  background: linear-gradient(to right, #414345, #232526);
+  background: -webkit-gradient(linear, right top, left top, from(#2c3e50), to(#bdc3c7));
+  background: linear-gradient(to left, #2c3e50, #bdc3c7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 5px;
-  padding: 15px 40px;
+  padding: 20px 55px;
+  font-weight: bold;
 }
 
 .joinEvent .join :hover {

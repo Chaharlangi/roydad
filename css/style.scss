@@ -35,9 +35,10 @@ $trans: all 350ms;
 
 body {
     font-family: shabnam;
-    background: #617181;
-    background: -webkit-linear-gradient(to right, #6e6f70, #a7acb3);
-    background: linear-gradient(to right, #949eaa, #8e949b);
+    background: #000428;
+    background: -webkit-linear-gradient(to right, #3e5a74, #1a1f4e);
+    background: linear-gradient(to right, #3c5264, #192375);
+
 
 }
 
@@ -51,7 +52,11 @@ nav {
 
 
     .navbar-brand {
-        width: 80px;
+        width: 100px;
+        padding: 15px 20px;
+       
+        border-radius: 10px;
+        background: #fff;
 
 
         img {
@@ -63,17 +68,25 @@ nav {
 
     .collapse {
         ul {
-            margin: 0 20px;
+
 
             a {
-                padding: 25px 25px;
+                margin: 10px;
+                padding: 10px 15px;
                 color: #fff;
                 font-size: 20px;
+                border-radius: 5px;
 
             }
 
             a:hover {
-                color: rgb(51, 50, 50);
+                background: #bdc3c7;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to left, #2c3e50, #bdc3c7);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
             }
 
         }
@@ -99,6 +112,7 @@ header {
     text-align: right;
     display: flex;
     align-items: center;
+    background: rgb(29, 28, 28);
 
     img {
         width: 100%;
@@ -133,14 +147,16 @@ header {
         a {
             color: #fff;
             transition: 250ms;
-            background: #232526;
+            background: #bdc3c7;
             /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #414345, #232526);
+            background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);
             /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #414345, #232526);
+            background: linear-gradient(to left, #2c3e50, #bdc3c7);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             border-radius: 5px;
-            padding: 15px 40px;
+            padding: 20px 55px;
+            font-weight: bold;
         }
 
         & :hover {
@@ -478,14 +494,16 @@ header {
         a {
             color: #fff;
             transition: 250ms;
-            background: #232526;
+            background: #bdc3c7;
             /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #414345, #232526);
+            background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);
             /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #414345, #232526);
+            background: linear-gradient(to left, #2c3e50, #bdc3c7);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             border-radius: 5px;
-            padding: 15px 40px;
+            padding: 20px 55px;
+            font-weight: bold;
         }
 
 
