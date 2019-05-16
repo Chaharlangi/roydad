@@ -1,0 +1,48 @@
+.button {
+    background: #fff;
+    border-radius: $radius;
+    padding: 15px 35px;
+    display: flex;
+    justify-content: center;
+    color: $brandColor;
+    font-weight: bold;
+    font-size: 18px;
+    transition: $trans;
+    cursor: pointer;
+    border: 1px solid transparent;
+    text-align: center;
+
+    &:hover {
+        text-decoration: none;
+        transform: translateY(-3px);
+        color: $brandColor;
+    }
+
+    &.outline {
+        background: transparent;
+        color: #fff;
+        border: 1px solid;
+
+        &:hover {
+            background: #fff;
+            color: $brandColor;
+        }
+    }
+
+    &.green {
+        background: #00C853;
+        color: #fff;
+
+        &.outline {
+            background: transparent;
+            color: #00C853;
+            border: 1px solid #00C853;
+
+            &:hover {
+                background: #00C853;
+                color: #fff;
+            }
+        }
+    }
+
+}

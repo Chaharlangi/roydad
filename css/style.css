@@ -1,4 +1,59 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lalezar");
+.button {
+  background: #fff;
+  border-radius: 5px;
+  padding: 15px 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #010024;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-align: center;
+}
+
+.button:hover {
+  text-decoration: none;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  color: #010024;
+}
+
+.button.outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid;
+}
+
+.button.outline:hover {
+  background: #fff;
+  color: #010024;
+}
+
+.button.green {
+  background: #00C853;
+  color: #fff;
+}
+
+.button.green.outline {
+  background: transparent;
+  color: #00C853;
+  border: 1px solid #00C853;
+}
+
+.button.green.outline:hover {
+  background: #00C853;
+  color: #fff;
+}
+
 @font-face {
   font-family: Shabnam;
   src: url("../font/Shabnam-FD.eot");
@@ -21,67 +76,41 @@
 }
 
 body {
-  font-family: shabnam;
-  background: #000428;
-  background: -webkit-gradient(linear, left top, right top, from(#3c5264), to(#192375));
-  background: linear-gradient(to right, #3c5264, #192375);
+  font-family: 'Shabnam', tahoma;
 }
 
 nav {
   width: 100%;
   position: absolute !important;
   z-index: 999;
-  height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-nav .navbar-brand {
-  width: 100px;
-  padding: 15px 20px;
-  border-radius: 10px;
   background: #fff;
 }
 
-nav .navbar-brand img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-nav .collapse ul a {
-  margin: 10px;
-  padding: 10px 15px;
-  color: #fff;
-  font-size: 20px;
-  border-radius: 5px;
-}
-
-nav .collapse ul a:hover {
-  background: #bdc3c7;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(#2c3e50), to(#bdc3c7));
-  background: linear-gradient(to left, #2c3e50, #bdc3c7);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+nav a {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 header {
   width: 100%;
-  height: 800px;
+  height: 100vh;
   position: relative;
-  text-align: right;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #1d1c1c;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    height: 120vh;
+  }
+}
+
+header:before {
+  content: '';
+  position: absolute;
+  background: rgba(1, 0, 36, 0.3);
+  width: 100%;
+  height: 100%;
 }
 
 header img {
@@ -89,13 +118,98 @@ header img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: .4;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  z-index: 0;
 }
 
-header .content {
+header .onCover {
+  padding: 10px;
   position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 20px;
+  z-index: 2;
+}
+
+header .onCover .eventIntroduction {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .onCover .eventIntroduction .title {
+  text-align: right;
+  font-size: 45px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 568px) {
+  header .onCover .eventIntroduction .title {
+    font-size: 37px;
+  }
+}
+
+header .onCover .eventIntroduction .dateLocation {
+  padding-bottom: 20px;
+}
+
+header .onCover .eventIntroduction .dateLocation span {
+  margin: 10px 0;
+  color: #fff;
+}
+
+header .onCover .eventIntroduction .dateLocation span i {
+  padding-left: 10px;
+}
+
+header .onCover .eventIntroduction .dateLocation a:hover {
+  text-decoration: none;
+}
+
+header .onCover .eventIntroduction .buyTicketInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+}
+
+header .onCover .eventIntroduction .buyTicketInfo .countdown {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-left: 150px;
+}
+
+header .onCover .eventIntroduction .buyTicketInfo .countdown:before {
+  content: "زمان باقی مانده";
+  position: absolute;
+  right: 0;
+  top: -25px;
+  font-size: 14px;
+}
+
+header .onCover .eventIntroduction .buyTicketInfo .countdown > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,58 +217,97 @@ header .content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #fff;
-  width: 400px;
-  right: 150px;
-  top: 340px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 20px;
 }
 
-header .content h1 {
-  padding-bottom: 10px;
+header .onCover .eventIntroduction .buyTicketInfo .countdown > div span {
+  font-size: 25px;
   font-weight: bold;
 }
 
-header .content p {
-  font-weight: normal;
+header .onCover .eventIntroduction .buyTicketInfo .countdown > div small {
+  opacity: .7;
 }
 
-header .content a {
-  color: #fff;
-  -webkit-transition: 250ms;
-  transition: 250ms;
-  background: #bdc3c7;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(#2c3e50), to(#bdc3c7));
-  background: linear-gradient(to left, #2c3e50, #bdc3c7);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  border-radius: 5px;
-  padding: 20px 55px;
-  font-weight: bold;
+@media screen and (max-width: 992px) {
+  header .onCover .eventIntroduction .buyTicketInfo .countdown {
+    margin-left: 0;
+  }
+  header .onCover .eventIntroduction .buyTicketInfo .countdown:before {
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+  header .onCover .eventIntroduction .buyTicketInfo .countdown > div {
+    margin: 0 10px;
+  }
 }
 
-header .content :hover {
-  text-decoration: none;
-}
-
-@media screen and (max-width: 568px) {
-  header .content {
+@media screen and (max-width: 992px) {
+  header .onCover .eventIntroduction .buyTicketInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .onCover .eventIntroduction .buyTicketInfo .buyTicketBtn {
+    margin-top: 35px;
     width: 100%;
-    padding-top: 50px;
-    right: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  header .onCover .eventIntroduction {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.about {
+  width: 100%;
+}
+
+.about .Text {
+  padding-top: 40px;
+  text-align: right;
+}
+
+.about .Text h2 {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 992px) {
+  .about .Text h2 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .about .Text p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .about .Text {
+    width: 100%;
   }
 }
 
 .about .poster {
   height: 550px;
-  margin-top: -200px;
+  margin-top: -400px;
   border-radius: 7px;
   overflow: hidden;
 }
@@ -166,7 +319,7 @@ header .content :hover {
      object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .about .poster {
     width: 100%;
     height: 100%;
@@ -174,52 +327,8 @@ header .content :hover {
   }
 }
 
-.about .contentt {
-  padding-top: 50px;
-  text-align: right;
-  color: #fff;
-}
-
-.about .contentt h2 {
-  padding-top: 50px;
-  font-weight: bold;
-}
-
-@media screen and (max-width: 568px) {
-  .about .contentt h2 {
-    font-size: 27px;
-  }
-}
-
-.about .contentt p {
-  padding-top: 20px;
-}
-
-@media screen and (max-width: 568px) {
-  .about .contentt p {
-    width: 100%;
-    font-size: 15px;
-  }
-}
-
-@media screen and (max-width: 568px) {
-  .about .contentt {
-    width: 100%;
-    padding-top: 50px;
-  }
-}
-
-.speaker {
+.cards {
   padding: 130px 0;
-  width: 100%;
-}
-
-.speaker h1 {
-  font-weight: bold;
-  color: #fff;
-}
-
-.speaker .cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -233,342 +342,35 @@ header .content :hover {
       flex-wrap: wrap;
 }
 
-.speaker .cards .card {
-  -webkit-box-shadow: 2px 0 5px #363535;
-          box-shadow: 2px 0 5px #363535;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  width: 250px;
-  height: 250px;
-  margin: 20px;
-  color: #000000;
-  border: none;
-  background: #97a1a8;
-  background: -webkit-gradient(linear, left top, right top, from(#b2b7b8), to(#91969b));
-  background: linear-gradient(to right, #b2b7b8, #91969b);
-}
-
-.speaker .cards .card .img {
-  width: 100px;
-  height: 100px;
-}
-
-.speaker .cards .card .img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 100%;
-}
-
-.speaker .cards .card h3 {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.gallery {
-  padding: 130px 0;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.gallery h1 {
-  font-weight: bold;
-  color: #fff;
-}
-
-.gallery .glery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 100px;
-}
-
-.gallery .glery .imagA {
-  margin: 70px 0 30px 37px;
-  width: 400px;
-  height: 400px;
-}
-
-.gallery .glery .imagA img {
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.gallery .glery .imagB {
-  width: 400px;
-  height: 400px;
-}
-
-.gallery .glery .imagB img {
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.gallery .glery .imagC {
-  margin: -73px 32px 10px -6px;
-  width: 400px;
-  height: 400px;
-}
-
-.gallery .glery .imagC img {
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.sponsors {
-  padding: 130px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.sponsors h1 {
-  font-weight: bold;
-  color: #fff;
-}
-
-.sponsors .profils {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  flex-wrap: wrap;
-  padding-bottom: 50px;
-}
-
-.sponsors .profils .profil {
-  margin: 20px;
-  width: 100px;
-  overflow: hidden;
-}
-
-.sponsors .profils .profil img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.timingTable {
-  padding: 130px 0;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.timingTable h1 {
-  font-weight: bold;
-  color: #fff;
-}
-
-.timingTable .list {
-  text-align: center;
-}
-
-.timingTable .list ul li {
-  margin: 5px;
-  font-size: 20px;
-  border-radius: 10px;
-  background: #e2e0e0;
-  color: #5a5a5a;
-}
-
-.timingTable .list ul li span {
-  padding-right: 20px;
-}
-
-.joinEvent {
-  padding: 130px 0;
-  color: #fff;
-}
-
-.joinEvent .cover {
-  width: 100%;
-  height: 400px;
-  position: absolute;
-}
-
-.joinEvent .cover img {
-  opacity: .5;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.joinEvent .join {
-  position: relative;
+.cards .card {
+  width: 300px;
   height: 300px;
-  width: 400px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: right;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 5px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  overflow: hidden;
-  top: 80px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+  border-radius: 10px;
 }
 
-.joinEvent .join h1 {
-  padding: 20px;
+.cards .card .imag {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
 }
 
-.joinEvent .join p {
-  padding-bottom: 20px;
-  font-size: 20px;
-}
-
-.joinEvent .join a {
-  color: #fff;
-  -webkit-transition: 250ms;
-  transition: 250ms;
-  background: #bdc3c7;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, right top, left top, from(#2c3e50), to(#bdc3c7));
-  background: linear-gradient(to left, #2c3e50, #bdc3c7);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  border-radius: 5px;
-  padding: 20px 55px;
-  font-weight: bold;
-}
-
-.joinEvent .join :hover {
-  text-decoration: none;
-  color: #fff;
-}
-
-@media screen and (max-width: 568px) {
-  .joinEvent .join {
-    width: 100%;
-  }
-}
-
-.joinEvent h1 {
-  padding: 0 20px;
-  font-weight: bold;
-}
-
-footer {
-  height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-footer .logo {
-  width: 70px;
-}
-
-footer .logo img {
+.cards .card .imag img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-footer .links {
-  font-size: 20px;
-}
-
-footer .links a {
-  color: #fff;
-  margin: 10px;
-}
-
-footer .links a:hover {
-  text-decoration: none;
-}
-
-footer .link {
-  font-size: 30px;
-}
-
-footer .link a {
-  color: #fff;
-  margin: 10px;
-}
-
-footer a:hover {
-  color: #333232;
 }
 /*# sourceMappingURL=style.css.map */
