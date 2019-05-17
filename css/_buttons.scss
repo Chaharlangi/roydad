@@ -30,16 +30,16 @@
     }
 
     &.green {
-        background: #00C853;
+        background: rgb(9, 2, 75);
         color: #fff;
 
         &.outline {
             background: transparent;
-            color: #00C853;
-            border: 1px solid #00C853;
+            color:  rgb(9, 2, 75);
+            border: 1px solid rgb(9, 2, 75);
 
             &:hover {
-                background: #00C853;
+                background:  rgb(9, 2, 75);
                 color: #fff;
             }
         }

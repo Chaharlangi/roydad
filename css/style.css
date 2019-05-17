@@ -39,18 +39,18 @@
 }
 
 .button.green {
-  background: #00C853;
+  background: #09024b;
   color: #fff;
 }
 
 .button.green.outline {
   background: transparent;
-  color: #00C853;
-  border: 1px solid #00C853;
+  color: #09024b;
+  border: 1px solid #09024b;
 }
 
 .button.green.outline:hover {
-  background: #00C853;
+  background: #09024b;
   color: #fff;
 }
 
@@ -332,6 +332,12 @@ header .onCover .eventIntroduction .buyTicketInfo .countdown > div small {
   padding: 130px 0;
 }
 
+.cards h1 {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
 .cards .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -375,6 +381,11 @@ header .onCover .eventIntroduction .buyTicketInfo .countdown > div small {
   font-weight: bold;
 }
 
+.cards .card .Specifications span {
+  font-size: 15px;
+  opacity: .7;
+}
+
 .cards .card .Specifications .social {
   padding-top: 10px;
 }
@@ -383,6 +394,22 @@ header .onCover .eventIntroduction .buyTicketInfo .countdown > div small {
   padding: 5px;
   color: grey;
   font-size: 22px;
+}
+
+.cards .card .Specifications .social a :hover {
+  color: #010024;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+}
+
+.eventGallery {
+  padding: 130px 0;
+}
+
+.eventGallery h1 {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 50px;
 }
 
 .eventGallery .eventGalleryHolder {
@@ -437,5 +464,163 @@ header .onCover .eventIntroduction .buyTicketInfo .countdown > div small {
 
 .sliderBtn.swiper-button-prev {
   right: 50px !important;
+}
+
+.table {
+  width: 100%;
+  padding: 130px 0;
+}
+
+.table h1 {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+
+.table .timetable {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.table .timetable .part {
+  height: 100%;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: ceter;
+      -ms-flex-align: ceter;
+          align-items: ceter;
+  -webkit-box-shadow: 0 1px grey;
+          box-shadow: 0 1px grey;
+  padding-top: 10px;
+}
+
+.table .timetable .part .imag {
+  margin: 0 10px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.table .timetable .part .imag img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 568px) {
+  .table .timetable .part .imag {
+    display: none;
+  }
+}
+
+.table .timetable .part .prelude {
+  margin: 0 10px;
+  text-align: right;
+}
+
+.table .timetable .part .prelude h2 {
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.table .timetable .part .prelude p {
+  font-size: 15px;
+  opacity: .7;
+}
+
+.table .timetable .part .time {
+  margin: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.table .timetable .part .time span {
+  font-weight: bold;
+  opacity: .7;
+}
+
+footer .footer {
+  padding: 0 50px;
+  width: 100%;
+  height: 120px;
+  background: #010024;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer .logo {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: grey;
+}
+
+footer .footer .logo img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer .footer .link {
+  margin: 0 10px;
+}
+
+footer .footer .link a {
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+footer .footer .link a:hover {
+  text-decoration: none;
+}
+
+footer .footer .socialMedia {
+  margin: 0 10px;
+}
+
+footer .footer .socialMedia a {
+  padding: 10px;
+  font-size: 18px;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
