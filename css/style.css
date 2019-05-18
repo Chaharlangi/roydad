@@ -54,6 +54,13 @@
   color: #fff;
 }
 
+.textH {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  padding-bottom: 55px;
+}
+
 @font-face {
   font-family: Shabnam;
   src: url("../font/Shabnam-FD.eot");
@@ -144,6 +151,7 @@ header .onCover .eventIntroduction {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 150px;
 }
 
 header .onCover .eventIntroduction .title {
@@ -176,20 +184,38 @@ header .onCover .eventIntroduction .dateLocation a:hover {
   text-decoration: none;
 }
 
-header .onCover .eventIntroduction .buyTicketInfo {
+@media screen and (max-width: 992px) {
+  header .onCover .eventIntroduction {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.about {
+  width: 100%;
+  position: relative;
+}
+
+.about .buyTicketInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 100px;
+  margin-top: 90px;
+  width: 100%;
 }
 
-header .onCover .eventIntroduction .buyTicketInfo .countdown {
+.about .buyTicketInfo .countdown {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -201,7 +227,7 @@ header .onCover .eventIntroduction .buyTicketInfo .countdown {
   margin-left: 150px;
 }
 
-header .onCover .eventIntroduction .buyTicketInfo .countdown:before {
+.about .buyTicketInfo .countdown:before {
   content: "زمان باقی مانده";
   position: absolute;
   right: 0;
@@ -209,7 +235,7 @@ header .onCover .eventIntroduction .buyTicketInfo .countdown:before {
   font-size: 14px;
 }
 
-header .onCover .eventIntroduction .buyTicketInfo .countdown > div {
+.about .buyTicketInfo .countdown > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,81 +252,38 @@ header .onCover .eventIntroduction .buyTicketInfo .countdown > div {
   margin-left: 20px;
 }
 
-header .onCover .eventIntroduction .buyTicketInfo .countdown > div span {
+.about .buyTicketInfo .countdown > div span {
   font-size: 25px;
   font-weight: bold;
 }
 
-header .onCover .eventIntroduction .buyTicketInfo .countdown > div small {
+.about .buyTicketInfo .countdown > div small {
   opacity: .7;
 }
 
 @media screen and (max-width: 992px) {
-  header .onCover .eventIntroduction .buyTicketInfo .countdown {
+  .about .buyTicketInfo .countdown {
     margin-left: 0;
   }
-  header .onCover .eventIntroduction .buyTicketInfo .countdown:before {
+  .about .buyTicketInfo .countdown:before {
     left: 0;
     margin: auto;
     text-align: center;
   }
-  header .onCover .eventIntroduction .buyTicketInfo .countdown > div {
+  .about .buyTicketInfo .countdown > div {
     margin: 0 10px;
   }
 }
 
 @media screen and (max-width: 992px) {
-  header .onCover .eventIntroduction .buyTicketInfo {
+  .about .buyTicketInfo {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  header .onCover .eventIntroduction .buyTicketInfo .buyTicketBtn {
+  .about .buyTicketInfo .buyTicketBtn {
     margin-top: 35px;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  header .onCover .eventIntroduction {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.about {
-  width: 100%;
-}
-
-.about .Text {
-  padding-top: 40px;
-  text-align: right;
-}
-
-.about .Text h2 {
-  font-weight: bold;
-}
-
-@media screen and (max-width: 992px) {
-  .about .Text h2 {
-    font-size: 22px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .about .Text p {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .about .Text {
     width: 100%;
   }
 }
@@ -327,15 +310,40 @@ header .onCover .eventIntroduction .buyTicketInfo .countdown > div small {
   }
 }
 
+@media screen and (max-width: 568px) {
+  .about .poster {
+    margin-top: 10px;
+  }
+}
+
+.toward {
+  padding: 130px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: right;
+}
+
+.toward h1 {
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
 .cards {
   width: 100%;
   padding: 130px 0;
-}
-
-.cards h1 {
-  text-align: center;
-  font-weight: bold;
-  padding-bottom: 30px;
 }
 
 .cards .card {
@@ -352,15 +360,15 @@ header .onCover .eventIntroduction .buyTicketInfo .countdown > div small {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: none;
-  padding-top: 20px;
+  margin: 10px 0;
+  padding: 20px 0;
   border-radius: 10px;
 }
 
 .cards .card .imag {
-  width: 100%;
-  height: 200px;
-  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   overflow: hidden;
 }
 
@@ -402,14 +410,14 @@ header .onCover .eventIntroduction .buyTicketInfo .countdown > div small {
   transition: all 350ms;
 }
 
-.eventGallery {
-  padding: 130px 0;
+@media screen and (max-width: 568px) {
+  .cards .card {
+    width: 100%;
+  }
 }
 
-.eventGallery h1 {
-  text-align: center;
-  font-weight: bold;
-  padding-bottom: 50px;
+.eventGallery {
+  padding: 130px 0;
 }
 
 .eventGallery .eventGalleryHolder {
@@ -426,6 +434,12 @@ header .onCover .eventIntroduction .buyTicketInfo .countdown > div small {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media screen and (max-width: 568px) {
+  .eventGallery .eventGalleryHolderImg {
+    height: 200px;
+  }
 }
 
 .sliderBtn {
@@ -469,12 +483,6 @@ header .onCover .eventIntroduction .buyTicketInfo .countdown > div small {
 .table {
   width: 100%;
   padding: 130px 0;
-}
-
-.table h1 {
-  text-align: center;
-  font-weight: bold;
-  padding-bottom: 50px;
 }
 
 .table .timetable {
@@ -570,8 +578,66 @@ header .onCover .eventIntroduction .buyTicketInfo .countdown > div small {
   opacity: .7;
 }
 
+.join {
+  width: 100%;
+  height: 400px;
+}
+
+.join .imagCover {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background: #010024;
+}
+
+.join .imagCover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: .3;
+}
+
+.join .textImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  text-align: right;
+  z-index: 999;
+  color: white;
+  width: 400px;
+  height: 400px;
+}
+
+.join .textImg h2 {
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.join .textImg p {
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 568px) {
+  .join .textImg {
+    width: 100%;
+  }
+}
+
 footer .footer {
-  padding: 0 50px;
   width: 100%;
   height: 120px;
   background: #010024;
@@ -584,6 +650,7 @@ footer .footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 footer .footer .logo {
@@ -600,12 +667,20 @@ footer .footer .logo img {
      object-fit: cover;
 }
 
+@media screen and (max-width: 568px) {
+  footer .footer .logo {
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
 footer .footer .link {
   margin: 0 10px;
 }
 
 footer .footer .link a {
-  padding: 10px;
+  padding: 0 10px;
   color: white;
   font-size: 18px;
 }
@@ -619,8 +694,17 @@ footer .footer .socialMedia {
 }
 
 footer .footer .socialMedia a {
-  padding: 10px;
+  padding: 0 10px;
   font-size: 18px;
   color: white;
+}
+
+@media screen and (max-width: 568px) {
+  footer .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */

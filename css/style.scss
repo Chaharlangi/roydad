@@ -62,6 +62,7 @@ header {
             text-align: left;
             align-items: flex-start;
             flex-direction: column;
+            padding-bottom: 150px;
 
             .title {
                 text-align: right;
@@ -92,69 +93,7 @@ header {
                 }
             }
 
-            .buyTicketInfo {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: 100px;
 
-                .countdown {
-                    position: relative;
-                    display: flex;
-                    flex-direction: row-reverse;
-                    margin-left: 150px;
-
-                    &:before {
-                        content: "زمان باقی مانده";
-                        position: absolute;
-                        right: 0;
-                        top: -25px;
-                        font-size: 14px;
-                    }
-
-                    >div {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        margin-left: 20px;
-
-                        span {
-                            font-size: 25px;
-                            font-weight: bold;
-                        }
-
-                        small {
-                            opacity: .7;
-                        }
-                    }
-
-                    @include down-992 {
-                        margin-left: 0;
-
-                        &:before {
-                            left: 0;
-                            margin: auto;
-                            text-align: center;
-                        }
-
-                        >div {
-                            margin: 0 10px;
-                        }
-                    }
-                }
-
-
-                @include down-992 {
-                    flex-direction: column;
-
-                    .buyTicketBtn {
-                        margin-top: 35px;
-                        width: 100%;
-                    }
-                }
-
-            }
 
 
             @include down-992 {
@@ -170,28 +109,69 @@ header {
 
 .about {
     width: 100%;
+    position: relative;
 
-    .Text {
-        padding-top: 40px;
-        text-align: right;
+    .buyTicketInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 90px;
+        width: 100%;
 
-        h2 {
-            font-weight: bold;
+        .countdown {
+            position: relative;
+            display: flex;
+            flex-direction: row-reverse;
+            margin-left: 150px;
 
-            @include down-992 {
-                font-size: 22px;
-            }
-        }
-
-        p {
-            @include down-992 {
+            &:before {
+                content: "زمان باقی مانده";
+                position: absolute;
+                right: 0;
+                top: -25px;
                 font-size: 14px;
+            }
+
+            >div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-left: 20px;
+
+                span {
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+
+                small {
+                    opacity: .7;
+                }
+            }
+
+            @include down-992 {
+                margin-left: 0;
+
+                &:before {
+                    left: 0;
+                    margin: auto;
+                    text-align: center;
+                }
+
+                >div {
+                    margin: 0 10px;
+                }
             }
         }
 
 
         @include down-992 {
-            width: 100%;
+            flex-direction: column;
+
+            .buyTicketBtn {
+                margin-top: 35px;
+                width: 100%;
+            }
         }
 
     }
@@ -213,19 +193,36 @@ header {
             height: 100%;
             margin-top: 0;
         }
+        @include down-568 {
+            margin-top: 10px;
+        }
 
     }
 
 }
 
-.cards {
+.toward {
+    @include sectionPadding;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
 
     h1 {
-        text-align: center;
         font-weight: bold;
-        padding-bottom: 30px;
+        font-size: 30px;
+        padding-bottom: 20px;
     }
+
+    p {
+     
+    }
+}
+
+.cards {
+    width: 100%;
 
     @include sectionPadding;
 
@@ -234,14 +231,14 @@ header {
         justify-content: flex-start;
         align-items: center;
         flex-direction: column;
-        border: none;
-        padding-top: 20px;
+        margin: 10px 0;
+       padding: 20px 0;
         border-radius: 10px;
-
+    
         .imag {
-            width: 100%;
-            height: 200px;
-            border-radius: 10px;
+         width: 100px;
+         height: 100px;
+            border-radius:50%;
             overflow: hidden;
 
             img {
@@ -280,15 +277,13 @@ header {
 
             }
         }
+        @include down-568 {
+            width: 100%;
+        }
     }
 }
 
 .eventGallery {
-    h1 {
-        text-align: center;
-        font-weight: bold;
-        padding-bottom: 50px;
-    }
 
     @include sectionPadding;
 
@@ -303,6 +298,9 @@ header {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+            }
+            @include down-568 {
+                height: 200px;
             }
         }
     }
@@ -341,12 +339,6 @@ header {
 .table {
     width: 100%;
     @include sectionPadding;
-
-    h1 {
-        text-align: center;
-        font-weight: bold;
-        padding-bottom: 50px;
-    }
 
     .timetable {
         width: 100%;
@@ -419,18 +411,63 @@ header {
     }
 }
 
+.join {
+    width: 100%;
+    height: 400px;
+
+    .imagCover {
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        background: $brandColor;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .3;
+        }
+ 
+    }
+
+    .textImg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        text-align: right;
+        z-index: 999;
+        color: white;
+        width: 400px;
+        height: 400px;
+        h2 {
+          padding-bottom: 10px;
+          font-weight: bold;
+          font-size: 30px
+        }
+        p {
+            padding-bottom: 20px;
+        }
+        @include down-568 {
+         width: 100%;   
+        }
+    }
+
+}
 
 
 footer {
 
     .footer {
-        padding: 0 50px;
         width: 100%;
         height: 120px;
         background: $brandColor;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        text-align: center;
 
         .logo {
             width: 70px;
@@ -443,13 +480,18 @@ footer {
                 width: 100%;
                 object-fit: cover;
             }
+            @include down-568 {
+             margin-top: 10px;
+            width: 50px;
+            height: 50px;
+            }
         }
 
         .link {
             margin: 0 10px;
 
             a {
-                padding: 10px;
+                padding:0 10px;
                 color: white;
                 font-size: 18px;
 
@@ -463,10 +505,16 @@ footer {
             margin: 0 10px;
 
             a {
-                padding: 10px;
+                padding:0 10px;
                 font-size: 18px;
                 color: white;
             }
+        }
+        @include down-568 {
+           flex-direction: column; 
+         
+        
+          
         }
     }
 }
