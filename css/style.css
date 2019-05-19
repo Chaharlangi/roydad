@@ -20,6 +20,12 @@
   text-align: center;
 }
 
+@media screen and (max-width: 1200px) {
+  .button {
+    padding: 15px 22px;
+  }
+}
+
 .button:hover {
   text-decoration: none;
   -webkit-transform: translateY(-3px);
@@ -97,6 +103,16 @@ nav a {
   color: black;
   font-size: 16px;
   font-weight: bold;
+}
+
+@media screen and (max-width: 992px) {
+  nav .navbar-nav .nav-item {
+    text-align: center;
+    -webkit-box-shadow: 0 1px #010024;
+            box-shadow: 0 1px #010024;
+    font-weight: bold;
+    font-size: 20px;
+  }
 }
 
 header {
@@ -205,14 +221,12 @@ header .onCover .eventIntroduction .dateLocation a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-top: 90px;
-  width: 100%;
 }
 
 .about .buyTicketInfo .countdown {
@@ -363,6 +377,7 @@ header .onCover .eventIntroduction .dateLocation a:hover {
   margin: 10px 0;
   padding: 20px 0;
   border-radius: 10px;
+  border: solid 1px #010024;
 }
 
 .cards .card .imag {
@@ -514,8 +529,8 @@ header .onCover .eventIntroduction .dateLocation a:hover {
   -webkit-box-align: ceter;
       -ms-flex-align: ceter;
           align-items: ceter;
-  -webkit-box-shadow: 0 1px grey;
-          box-shadow: 0 1px grey;
+  -webkit-box-shadow: 0 1px #010024;
+          box-shadow: 0 1px #010024;
   padding-top: 10px;
 }
 
@@ -639,14 +654,13 @@ header .onCover .eventIntroduction .dateLocation a:hover {
 
 footer .footer {
   width: 100%;
-  height: 120px;
+  height: 150px;
   background: #010024;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -675,6 +689,20 @@ footer .footer .logo img {
   }
 }
 
+footer .footer .socialMedia {
+  margin: 0 10px;
+}
+
+footer .footer .socialMedia a {
+  padding: 0 10px;
+  font-size: 18px;
+  color: white;
+}
+
+footer .footer .socialMedia a:hover {
+  opacity: .7;
+}
+
 footer .footer .link {
   margin: 0 10px;
 }
@@ -687,16 +715,22 @@ footer .footer .link a {
 
 footer .footer .link a:hover {
   text-decoration: none;
+  opacity: .7;
 }
 
-footer .footer .socialMedia {
-  margin: 0 10px;
+footer .footer .link .A {
+  background: #fff;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 5px;
 }
 
-footer .footer .socialMedia a {
-  padding: 0 10px;
-  font-size: 18px;
-  color: white;
+@media screen and (max-width: 568px) {
+  footer .footer .link .A {
+    padding: 0 10px;
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 568px) {

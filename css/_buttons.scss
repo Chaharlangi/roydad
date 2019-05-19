@@ -12,6 +12,11 @@
     border: 1px solid transparent;
     text-align: center;
 
+    @include down-1200 {
+        padding: 15px 22px;
+    }
+
+
     &:hover {
         text-decoration: none;
         transform: translateY(-3px);
@@ -35,15 +40,17 @@
 
         &.outline {
             background: transparent;
-            color:  rgb(9, 2, 75);
+            color: rgb(9, 2, 75);
             border: 1px solid rgb(9, 2, 75);
 
             &:hover {
-                background:  rgb(9, 2, 75);
+                background: rgb(9, 2, 75);
                 color: #fff;
             }
         }
     }
+
+  
 
 }
 

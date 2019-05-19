@@ -17,10 +17,22 @@ nav {
     z-index: 999;
     background: #fff;
 
+
     a {
         color: black;
         font-size: 16px;
         font-weight: bold;
+    }
+
+    .navbar-nav {
+        .nav-item {
+            @include down-992 {
+                text-align: center;
+                box-shadow: 0 1px $brandColor;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
     }
 }
 
@@ -113,10 +125,9 @@ header {
 
     .buyTicketInfo {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         margin-top: 90px;
-        width: 100%;
 
         .countdown {
             position: relative;
@@ -162,6 +173,7 @@ header {
                     margin: 0 10px;
                 }
             }
+
         }
 
 
@@ -193,6 +205,7 @@ header {
             height: 100%;
             margin-top: 0;
         }
+
         @include down-568 {
             margin-top: 10px;
         }
@@ -216,9 +229,7 @@ header {
         padding-bottom: 20px;
     }
 
-    p {
-     
-    }
+    p {}
 }
 
 .cards {
@@ -232,13 +243,14 @@ header {
         align-items: center;
         flex-direction: column;
         margin: 10px 0;
-       padding: 20px 0;
+        padding: 20px 0;
         border-radius: 10px;
-    
+        border: solid 1px $brandColor;
+
         .imag {
-         width: 100px;
-         height: 100px;
-            border-radius:50%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
             overflow: hidden;
 
             img {
@@ -277,6 +289,7 @@ header {
 
             }
         }
+
         @include down-568 {
             width: 100%;
         }
@@ -299,6 +312,7 @@ header {
                 height: 100%;
                 object-fit: cover;
             }
+
             @include down-568 {
                 height: 200px;
             }
@@ -354,7 +368,7 @@ header {
             display: flex;
             justify-content: center;
             align-items: ceter;
-            box-shadow: 0 1px grey;
+            box-shadow: 0 1px $brandColor;
             padding-top: 10px;
 
             .imag {
@@ -428,7 +442,7 @@ header {
             object-fit: cover;
             opacity: .3;
         }
- 
+
     }
 
     .textImg {
@@ -442,16 +456,19 @@ header {
         color: white;
         width: 400px;
         height: 400px;
+
         h2 {
-          padding-bottom: 10px;
-          font-weight: bold;
-          font-size: 30px
+            padding-bottom: 10px;
+            font-weight: bold;
+            font-size: 30px
         }
+
         p {
             padding-bottom: 20px;
         }
+
         @include down-568 {
-         width: 100%;   
+            width: 100%;
         }
     }
 
@@ -462,10 +479,10 @@ footer {
 
     .footer {
         width: 100%;
-        height: 120px;
+        height: 150px;
         background: $brandColor;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         text-align: center;
 
@@ -480,10 +497,24 @@ footer {
                 width: 100%;
                 object-fit: cover;
             }
+
             @include down-568 {
-             margin-top: 10px;
-            width: 50px;
-            height: 50px;
+                margin-top: 10px;
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .socialMedia {
+            margin: 0 10px;
+
+            a {
+                padding: 0 10px;
+                font-size: 18px;
+                color: white;
+
+                &:hover {
+                    opacity: .7;
+                }
             }
         }
 
@@ -491,30 +522,32 @@ footer {
             margin: 0 10px;
 
             a {
-                padding:0 10px;
+                padding: 0 10px;
                 color: white;
                 font-size: 18px;
 
                 &:hover {
                     text-decoration: none;
+                    opacity: .7;
                 }
             }
-        }
-
-        .socialMedia {
-            margin: 0 10px;
-
-            a {
-                padding:0 10px;
-                font-size: 18px;
-                color: white;
+            .A {
+                background: #fff;
+                color: black;
+               border-radius: $radius;
+               padding: 10px 15px;
+               margin-top: 5px;
+               @include down-568 {
+                padding: 0 10px;
+              margin-top: 0;
+            }
             }
         }
+
+       
+
         @include down-568 {
-           flex-direction: column; 
-         
-        
-          
+            flex-direction: column;
         }
     }
 }
