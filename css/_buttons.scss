@@ -1,10 +1,11 @@
 .button {
-    background: #fff;
+    background: $brandColor;
     border-radius: $radius;
+    white-space: nowrap;
     padding: 15px 35px;
     display: flex;
     justify-content: center;
-    color: $brandColor;
+    color: #fff;
     font-weight: bold;
     font-size: 18px;
     transition: $trans;
@@ -20,7 +21,7 @@
     &:hover {
         text-decoration: none;
         transform: translateY(-3px);
-        color: $brandColor;
+        color: #fff;
     }
 
     &.outline {
@@ -35,17 +36,35 @@
     }
 
     &.green {
-        background: rgb(9, 2, 75);
+        background-color: #08ea35;
+        background-image: linear-gradient(128deg, #08ea35 0%, #3ac400 100%);
         color: #fff;
 
         &.outline {
             background: transparent;
-            color: rgb(9, 2, 75);
-            border: 1px solid rgb(9, 2, 75);
+            color: #08ea35;
+            border: 1px solid #08ea35;
 
             &:hover {
-                background: rgb(9, 2, 75);
+                background-color: #08ea35;
+                background-image: linear-gradient(128deg, #08ea35 0%, #3ac400 100%);
                 color: #fff;
+            }
+        }
+    }
+
+    &.white {
+        background: #fff;
+        color: $brandColor;
+
+        &.outline {
+            background: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+
+            &:hover {
+                background: #fff;
+                color: $brandColor;
             }
         }
     }

@@ -15,36 +15,95 @@
 
     <!-- JS -->
     <script src="./js/jquery.js"></script>
+    <script src="./js/babel.js"></script>
 </head>
 
 <body>
 
 
+    <span class="brandColorTopLine"></span>
+
+
     <!-- navbar --------------------------------->
-    <nav class="navbar navbar-expand-lg py-3">
+    <nav class="navbar navbar-expand-lg py-4 darkShadow">
 
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img height="70" src="" alt="">
+                <img height="40" src="./img/logo.png" alt="logo">
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
+                <i class="fal fa-bars text-white"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">رویداد</a>
+                <ul class="menuLink mr-3">
+
+                    <li>
+                        <a class="nav-link" href="#">صفحه نخست</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">ثبت نام</a>
+                    <li>
+                        <a class="nav-link" href="#">
+                            درباره ما
+                            <i class="fal fa-angle-down"></i>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="">درباره</a>
+                            </li>
+                            <li>
+                                <a href="">سوالات متداول</a>
+                            </li>
+                        </ul>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">درباره</a>
+                    <li>
+                        <a class="nav-link" href="#">
+                            رویدادهای گذشته
+                            <i class="fal fa-angle-down"></i>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="">Tehran TEDx 2017</a>
+                            </li>
+                            <li>
+                                <a href="">Tehran TEDx 2018</a>
+                            </li>
+                            <li>
+                                <a href="">Tehran Women TEDx 2018</a>
+                            </li>
+                            <li>
+                                <a href="">TEDx Global Day</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">
+                            مشارکت
+                            <i class="fal fa-angle-down"></i>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="">همکاری فنی</a>
+                            </li>
+                            <li>
+                                <a href="">کاندیدای گویندگی</a>
+                            </li>
+                            <li>
+                                <a href="">اسپانسر</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">تیم</a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">تماس</a>
                     </li>
 
                 </ul>
@@ -57,7 +116,6 @@
     <!-- /nav ----------------------------------->
 
 
-
     <!-- header ----------------------------------->
     <header>
 
@@ -66,20 +124,25 @@
                 <div class="eventIntroduction">
                     <!-- Title -->
                     <h1 class="title">
-                        رویداد مقابله با سیل
+                        هشتمین رویداد TEDx Tehran
                     </h1>
 
                     <!-- Date -->
                     <div class="dateLocation">
 
-                        <span class="ml-4">
-                            <i class="far fa-calendar"></i>
+                        <span>
+                            <i class="fas fa-calendar"></i>
                             چهارشنبه، 18 مهر
                         </span>
 
                         <span>
-                            <i class="far fa-map-marker-alt"></i>
-                            اهواز
+                            <i class="fas fa-clock"></i>
+                            9:30 صبح
+                        </span>
+
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            اهواز، دانشگاه چمران
                         </span>
 
                     </div>
@@ -89,10 +152,9 @@
             </div>
         </div>
 
-        <img src="./img/7.jpg" alt="">
+        <img class="bgHeader" src="./img/header.jpg" alt="">
     </header>
     <!-- /header ----------------------------------->
-
 
 
     <!-- about ------------------------------------->
@@ -127,15 +189,14 @@
 
 
                         <!-- Sign up button -->
-                        <a href="" class="button buyTicketBtn green">ثبت نام</a>
+                        <a href="" class="button buyTicketBtn">ثبت نام</a>
                     </div>
                 </div>
 
                 <!-- Event poster -->
                 <div class="col-12 col-lg-6 col-xl-5">
                     <div class="poster bg-dark">
-                        <img src="https://images.unsplash.com/photo-1543269664-2407826601eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
-                            alt="">
+                        <img src="./img/poster0.jpg" alt="poster">
                     </div>
                 </div>
 
@@ -143,133 +204,230 @@
         </div>
     </section>
     <!-- /about ------------------------------------->
-    <!-- toward ------------------------------------->
-    <section class="container">
-        <div class="toward">
-            <h1>درباره رویداد</h1>
-            <p>
+
+
+    <!-- Intro ------------------------------------->
+    <section class="intro">
+
+        <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto">
+            <h1 class="sectionTitle">هشتمین رویداد TEDx Tehran</h1>
+            <p class="m-0">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
                 متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
                 کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده
                 شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
-                الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+                الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و
+                <br>
+                <br>
+                دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای
+                اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
             </p>
+        </div>
+
+        <a href="#" class="imgHolder right video">
+            <img src="./img/maxresdefault.jpg" alt="">
+            <span>
+                <i class="fas fa-play fa-lg"></i>
+            </span>
+        </a>
+
+        <div class="imgHolder left">
+            <img src="./img/img1.jpg" alt="">
+        </div>
+
+    </section>
+    <!-- /Intro ------------------------------------>
+
+
+    <!-- Speakers -------------------------------------->
+    <section class="speakers container">
+        <h1 class="sectionTitle">سخنرانان</h1>
+
+        <div class="row justify-content-center">
+
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="speaker">
+                    <div class="avatar">
+                        <img src="./img/Speakers/ali-yekani.jpg" alt="">
+                    </div>
+                    <h5 class="name">علی یکانی</h5>
+                    <div class="social">
+                        <a href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="speaker">
+                    <div class="avatar">
+                        <img src="./img/Speakers/Amir-Fatehi.jpg" alt="">
+                    </div>
+                    <h5 class="name">امیر فتحی</h5>
+                    <div class="social">
+                        <a href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="speaker">
+                    <div class="avatar">
+                        <img src="./img/Speakers/Asal-Ghamari-Picture.jpg" alt="">
+                    </div>
+                    <h5 class="name">عسل قمری</h5>
+                    <div class="social">
+                        <a href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="speaker">
+                    <div class="avatar">
+                        <img src="./img/Speakers/Azin-Afshar.jpg" alt="">
+                    </div>
+                    <h5 class="name">آذین افشار</h5>
+                    <div class="social">
+                        <a href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="speaker">
+                    <div class="avatar">
+                        <img src="./img/Speakers/DSC0138-Copy.jpg" alt="">
+                    </div>
+                    <h5 class="name">عطیه بیات</h5>
+                    <div class="social">
+                        <a href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="speaker">
+                    <div class="avatar">
+                        <img src="./img/Speakers/Golnoosh-Baratpour.jpg" alt="">
+                    </div>
+                    <h5 class="name">گلنوش برات‌پور</h5>
+                    <div class="social">
+                        <a href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="speaker">
+                    <div class="avatar">
+                        <img src="./img/Speakers/amir-hashemi.jpg" alt="">
+                    </div>
+                    <h5 class="name">امیر هاشمی</h5>
+                    <div class="social">
+                        <a href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="speaker">
+                    <div class="avatar">
+                        <img src="./img/Speakers/farshid-roohi.jpg" alt="">
+                    </div>
+                    <h5 class="name">فرشید روحی</h5>
+                    <div class="social">
+                        <a href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <div class="speaker">
+                    <div class="avatar">
+                        <img src="./img/Speakers/leila-akbari.jpg" alt="">
+                    </div>
+                    <h5 class="name">لیلا اکبری</h5>
+                    <div class="social">
+                        <a href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </section>
-    <!-- /toward ------------------------------------>
-    <!-- cards -------------------------------------->
-    <section class="container cards">
-        <h1 class="textH">سخنرانان</h1>
-        <div class="row m-0">
-            <div class="co1-12 col-md-6 col-lg-4 col-xl-3">
-                <div class="card">
-                    <div class="imag">
-                        <img src="./img/2.jpg" alt="">
-                    </div>
-                    <div class="Specifications">
-                        <h2>گلرخ
-                        </h2>
-                        <span>مشاور</span>
+    <!-- /Speakers -------------------------------------->
 
-                        <div class="social">
-                            <a href=""><i class="fab fa-linkedin"></i></a>
-                            <a href=""><i class="fab fa-telegram"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="co1-12 col-md-6 col-lg-4 col-xl-3">
-                <div class="card">
-                    <div class="imag">
-                        <img src="./img/5.jpg" alt="">
-                    </div>
-                    <div class="Specifications">
-                        <h2>آرمان شجاعی
-                        </h2>
-                        <span>برنامه نویس</span>
-
-                        <div class="social">
-                            <a href=""><i class="fab fa-linkedin"></i></a>
-                            <a href=""><i class="fab fa-telegram"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="co1-12 col-md-6 col-lg-4 col-xl-3">
-                <div class="card">
-                    <div class="imag">
-                        <img src="./img/6.jpg" alt="">
-                    </div>
-                    <div class="Specifications">
-                        <h2>مرجان
-                        </h2>
-                        <span>موسس</span>
-
-                        <div class="social">
-                            <a href=""><i class="fab fa-linkedin"></i></a>
-                            <a href=""><i class="fab fa-telegram"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="co1-12 col-md-6 col-lg-4 col-xl-3">
-                <div class="card">
-                    <div class="imag">
-                        <img src="./img/7.jpg" alt="">
-                    </div>
-                    <div class="Specifications">
-                        <h2>علی
-                        </h2>
-                        <span>بناینگذار</span>
-
-                        <div class="social">
-                            <a href=""><i class="fab fa-linkedin"></i></a>
-                            <a href=""><i class="fab fa-telegram"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- /cards -------------------------------------->
 
     <!-- eventGallery--------------------------------->
     <div class="eventGallery">
-        <h1 class="textH">گالری عکس ها</h1>
         <div class="swiper-container eventGalleryHolder" dir="rtl">
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
                     <div class="eventGalleryHolderImg">
-                        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
-                            alt="">
+                        <img src="./img/gallery/31264225884_a75dc84ffb_b.jpg" alt="">
                     </div>
                 </div>
 
                 <div class="swiper-slide">
                     <div class="eventGalleryHolderImg">
-                        <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
-                            alt="">
+                        <img src="./img/gallery/32017128372_63d30f5922_b.jpg" alt="">
                     </div>
                 </div>
 
                 <div class="swiper-slide">
                     <div class="eventGalleryHolderImg">
-                        <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b302a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
-                            alt="">
+                        <img src="./img/gallery/32165478085_8203689d69_b.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="eventGalleryHolderImg">
+                        <img src="./img/gallery/C0GXyMgWEAA_Rpb.jpg-large-1024x634.jpg" alt="">
                     </div>
                 </div>
 
             </div>
+
 
             <div class="sliderBtn swiper-button-next">
                 <i class="far fa-arrow-left"></i>
@@ -278,127 +436,247 @@
                 <i class="far fa-arrow-right"></i>
             </div>
         </div>
+
+        <div class="swiper-pagination sliderIndicator"></div>
+
     </div>
     <!-- /eventGallery ------------------------------->
 
-    <!-- timetable ---------------------------------->
-    <section class="table container">
-        <h1 class="textH">جدول زمانبندی</h1>
-        <div class="timetable">
-            <div class="part">
-                <div class="time">
-                    <span>10:20 _ 12:20 </span>
-                </div>
-                <div class="prelude">
-                    <h2> شروع رویداد</h2>
-                    <p>
-                        لورم ایپسوم متن ساختگی
-                        با تولید سادگی نامفهوم
-                        از طراحان گرافیک است
-                    </p>
-                </div>
-                <div class="imag">
-                    <img src="./img/2.jpg" alt="">
-                </div>
-            </div>
-            <div class="part">
-                <div class="time">
-                    <span>12:20 _ 14:20 </span>
-                </div>
-                <div class="prelude">
-                    <h2>سخنرانی اول</h2>
-                    <p>
-                        لورم ایپسوم متن ساختگی
 
-                        با تولید سادگی نامفهوم
-                        از طراحان گرافیک است
-                    </p>
-                </div>
-                <div class="imag">
-                    <img src="./img/5.jpg" alt="">
-                </div>
-            </div>
+    <!-- timetable ---------------------------------->
+    <section class="timeTable container">
+        <h1 class="sectionTitle">جدول زمانبندی</h1>
+
+        <div class="timeTebl col-12 col-md-9 col-lg-7 mx-auto">
+
             <div class="part">
                 <div class="time">
-                    <span>15:20 _ 16:20 </span>
+                    <span>9:30</span>
+                    الی
+                    <span>10:00</span>
                 </div>
-                <div class="prelude">
-                    <h2> استراحت و پذیرایی</h2>
-                    <p>
-                        لورم ایپسوم متن ساختگی
-                        با تولید سادگی نامفهوم
-                        از طراحان گرافیک است
-                    </p>
+
+                <div class="content">
+                    <h4>
+                        افتتاحیه رویداد
+                    </h4>
                 </div>
-                <div class="imag">
-                    <img src="./img/7.jpg" alt="">
+
+                <div class="image">
                 </div>
             </div>
+
             <div class="part">
                 <div class="time">
-                    <span>16:20 _ 18:20 </span>
+                    <span>10:00</span>
+                    الی
+                    <span>12:00</span>
                 </div>
-                <div class="prelude">
-                    <h2> سخنرانی دوم </h2>
-                    <p>
-                        لورم ایپسوم متن ساختگی
-                        با تولید سادگی نامفهوم
-                        از طراحان گرافیک است
-                    </p>
+
+                <div class="content">
+                    <h4>
+                        سخنرانی اول: آذین افشار
+                    </h4>
+                    <small>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                    </small>
                 </div>
-                <div class="imag">
-                    <img src="./img/8.jpg" alt="">
+
+                <div class="image">
+                    <img src="./img/Speakers/Azin-Afshar.jpg" alt="">
                 </div>
             </div>
+
+            <div class="part">
+                <div class="time">
+                    <span>12:00</span>
+                    الی
+                    <span>14:00</span>
+                </div>
+
+                <div class="content">
+                    <h4>
+                        سخنرانی دوم: علی یکانی
+                    </h4>
+                    <small>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                    </small>
+                </div>
+
+                <div class="image">
+                    <img src="./img/Speakers/ali-yekani.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="part">
+                <div class="time">
+                    <span>14:00</span>
+                    الی
+                    <span>14:30</span>
+                </div>
+
+                <div class="content">
+                    <h4>
+                        استراحت و پذیرایی
+                    </h4>
+                </div>
+
+                <div class="image">
+                    <!-- <img src="./img/Speakers/ali-yekani.jpg" alt=""> -->
+                </div>
+            </div>
+
+            
+            <div class="part">
+                <div class="time">
+                    <span>12:00</span>
+                    الی
+                    <span>14:00</span>
+                </div>
+
+                <div class="content">
+                    <h4>
+                        سخنرانی سوم: لیلا اکبری
+                    </h4>
+                    <small>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                    </small>
+                </div>
+
+                <div class="image">
+                    <img src="./img/Speakers/leila-akbari.jpg" alt="">
+                </div>
+            </div>
+
         </div>
+
     </section>
     <!-- /timetable --------------------------------->
 
-    <section>
-        <div class="join">
-            <div class="imagCover">
-                <img src="./img/9.jpg" alt="">
-            </div>
-            <div class="textImg container">
-                <h2>اینجا ثبت نام کنید</h2>
-                <p>
 
-                    متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
-                    کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-                </p>
-                <a href="" class="button buyTicketBtn">
-                    ثبت نام
-                </a>
-            </div>
-        </div>
+    <!-- Sponsors ---------------------------------->
+    <section class="sponsors container">
+
+        <h1 class="sectionTitle">حامیان رویداد</h1>
+
+        <div class="logos">
+
+            <a href="#" class="item" target="_blank">
+                <img src="./img/Sponsors/58441a71cd161.png" alt="">
+            </a>
+
+            <a href="#" class="item" target="_blank">
+                <img src="./img/Sponsors/Site-Footer-Logo-1.png" alt="">
+            </a>
+
+            <a href="#" class="item" target="_blank">
+                <img src="./img/Sponsors/badkoobeh-2.png" alt="">
+            </a>
+
+            <a href="#" class="item" target="_blank">
+                <img src="./img/Sponsors/butane.png" alt="">
+            </a>
+
+            <a href="#" class="item" target="_blank">
+                <img src="./img/Sponsors/carpino.png" alt="">
+            </a>
+
+            <a href="#" class="item" target="_blank">
+                <img src="./img/Sponsors/illy.png" alt="">
+            </a>
+
+            <a href="#" class="item" target="_blank">
+                <img src="./img/Sponsors/kaleh.png" alt="">
+            </a>
+
+            <a href="#" class="item" target="_blank">
+                <img src="./img/Sponsors/khavarzamin.png" alt="">
+            </a>
+
+            <a href="#" class="item" target="_blank">
+                <img src="./img/Sponsors/pars-online.png" alt="">
+            </a>
+
+            <a href="#" class="item" target="_blank">
+                <img src="./img/Sponsors/sinoosh.png" alt="">
+            </a>
+
         </div>
 
     </section>
+    <!-- /Sponsors ---------------------------------->
 
 
-    <!-- footer ------------------------------------->
-    <footer>
-        <div class="footer">
-            <div class="logo">
-                <img src="" alt="">
+    <!-- Register ----------------------------------->
+    <div class="bigImage">
+        <!-- <img src="./img/down.jpg" alt=""> -->
+    </div>
+
+    <div class="register">
+        <div class="col-11 col-md-6 col-lg-4 mx-auto">
+
+            <div class="dateTime">
+                <div>
+                    <small>تاریخ:</small>
+                    <span>
+                        چهارشنبه، 18 مهر
+                    </span>
+                </div>
+
+                <div>
+                    <small>ساعت:</small>
+                    <span>
+                        9:30 صبح
+                    </span>
+                </div>
             </div>
-            <div class="socialMedia">
-                <a href=""><i class="fab fa-instagram"></i></a>
-                <a href=""><i class="fas fa-phone"></i></a>
-                <a href=""><i class="fab fa-telegram-plane"></i></a>
-                <a href=""><i class="fas fa-envelope"></i></a>
+
+            <div class="address">
+                <small>آدرس:</small>
+                <span>
+                    اهواز، دانشگاه شهید چمران اهواز، مرکز رشد واحدهای فناور، ساختمان مرکزی، طبقه همکف، اتاق 32
+                </span>
             </div>
-            <div class="link">
-                <a class="A" href="">ثبت نام</a>
-                <a href="">رویداد</a>
-                <a href="">درباره</a>
-            </div>
+
+            <button class="button white mt-5">
+                ثبت نام
+            </button>
 
         </div>
+    </div>
+    <!-- Register ----------------------------------->
 
+    <!-- Footer ------------------------------------->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start">
+                    <div class="social">
+                        <a href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end mt-4 mt-md-0">
+                    <span class="cr">
+                        رویداد 1398 -
+                        ساخته شده با عشق توسط
+                        <a href="" class="text-brand" target="_blank">تیم نرم‌افزاری گیلاس</a>
+                    </span>
+                </div>
+
+            </div>
+        </div>
     </footer>
-    <!-- /footer ------------------------------------>
-
+    <!-- /Footer ------------------------------------->
 
     <script src="./js/popper.js"></script>
     <script src="./js/bootstrap.min.js"></script>
