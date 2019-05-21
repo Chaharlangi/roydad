@@ -170,26 +170,27 @@
                         <!-- CountDown -->
                         <div class="countdown">
                             <div class="days">
-                                <span>05</span>
+                                <span class="daysNum">05</span>
                                 <small>روز</small>
                             </div>
                             <div class="hours">
-                                <span>14</span>
+                                <span class="hoursNum">14</span>
                                 <small>ساعت</small>
                             </div>
                             <div class="minutes">
-                                <span>54</span>
+                                <span class="minutesNum">54</span>
                                 <small>دقیقه</small>
                             </div>
                             <div class="seconds">
-                                <span>18</span>
+                                <span class="secondsNum">18</span>
                                 <small>ثانیه</small>
                             </div>
                         </div>
 
 
                         <!-- Sign up button -->
-                        <a href="" class="button buyTicketBtn">ثبت نام</a>
+                        <a href="" class="button buyTicketBtn"
+                        data-toggle="modal" data-target="#register">ثبت نام</a>
                     </div>
                 </div>
 
@@ -609,7 +610,7 @@
 
     <!-- Register ----------------------------------->
     <div class="bigImage">
-        <!-- <img src="./img/down.jpg" alt=""> -->
+        <img src="./img/down.jpg" alt="">
     </div>
 
     <div class="register">
@@ -638,7 +639,8 @@
                 </span>
             </div>
 
-            <button class="button white mt-5">
+            <button class="button white mt-5"
+            data-toggle="modal" data-target="#register">
                 ثبت نام
             </button>
 
@@ -677,6 +679,59 @@
         </div>
     </footer>
     <!-- /Footer ------------------------------------->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <form action="" method="POST" class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title ml-auto" id="exampleModalLabel">
+                    انتخاب بلیط
+                </h5>
+                <button type="button" class="close ml-0" data-dismiss="modal" aria-label="Close">
+                    <i class="fal fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body py-4">
+            
+                <div class="ticket">
+                    <h4 class="font-weight-bold">بلیط زود هنگام</h4>
+                    <div class="footer">
+                        <span class="text-success">40,000 تومان</span>
+                        <select name="" id="">
+                            <option value="">تعداد</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="ticket">
+                    <h4 class="font-weight-bold">بلیط شرکتی</h4>
+                    <div class="footer">
+                        <span class="text-success">45,000 تومان</span>
+                        <select name="" id="">
+                            <option value="">تعداد</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="button green">خرید بلیط</button>
+            </div>
+        </div>
+        </form>
+    </div>                                                
 
     <script src="./js/popper.js"></script>
     <script src="./js/bootstrap.min.js"></script>

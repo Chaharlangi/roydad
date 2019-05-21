@@ -36,18 +36,16 @@
     }
 
     &.green {
-        background-color: #08ea35;
-        background-image: linear-gradient(128deg, #08ea35 0%, #3ac400 100%);
+        background-color: #00c026;
         color: #fff;
 
         &.outline {
             background: transparent;
-            color: #08ea35;
-            border: 1px solid #08ea35;
+            color: #00c026;
+            border: 1px solid #00c026;
 
             &:hover {
-                background-color: #08ea35;
-                background-image: linear-gradient(128deg, #08ea35 0%, #3ac400 100%);
+                background-color: #00c026;
                 color: #fff;
             }
         }

@@ -92,10 +92,6 @@ nav {
     @include down-992 {
         flex-direction: column;
         align-items: center;
-
-        a {
-            color: #000 !important;
-        }
     }
 
     li {
@@ -109,7 +105,7 @@ nav {
         @include down-992 {
             width: 100%;
             padding: 0;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid rgba(#fff, .05);
 
             &:last-child {
                 border-bottom: 0;
@@ -315,11 +311,12 @@ header {
             display: flex;
             flex-direction: row-reverse;
             margin-left: 150px;
+            margin-right: -5px;
 
             &:before {
                 content: "زمان باقی مانده";
                 position: absolute;
-                right: 0;
+                right: 10px;
                 top: -25px;
                 font-size: 14px;
             }
@@ -329,7 +326,11 @@ header {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                margin-left: 20px;
+                border-left: 1px solid #eee;
+                min-width: 60px;
+                &:first-child {
+                    border-left: 0;
+                }
 
                 span {
                     font-size: 25px;
@@ -612,6 +613,10 @@ header {
         align-items: center;
         border-bottom: 1px solid #eee;
 
+        &:last-child {
+            border-bottom: 0;
+        }
+
         .image {
             min-width: 100px;
             width: 100px;
@@ -793,4 +798,22 @@ footer {
             }
         }
     }
+}
+
+.ticket {
+    border: 2px solid #eee;
+    border-radius: $radius;
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    .footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.modal-footer {
+    background: #eee;
 }
